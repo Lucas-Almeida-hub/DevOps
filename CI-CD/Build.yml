@@ -1,0 +1,9 @@
+---
+- name: Criando Build
+  hosts: Local
+  become: yes #sobe para usurio priveligiado 
+  tasks:
+  - name: Instalar servidor web Nginx
+    package: #Modulo responsavel por gerenciar pacote 
+        name: nginx
+        state: present # present, ausente,atulizado 

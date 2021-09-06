@@ -1,0 +1,5 @@
+[Local]
+localhost 
+
+[web]
+3.128.190.246 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=~/Documentos/Projeto/Chave/lucas.pem
