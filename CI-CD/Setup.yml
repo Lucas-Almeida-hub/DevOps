@@ -3,10 +3,11 @@
   become: yes
   tasks:
   - name: Gerando Build Docker
-    command: docker build -f dockerfile -t almeida:1 .
+    command: docker build -f dockerfile -t almeida .
   - name: Executando container 
-    command: docker run -it -d almeida:1
-
+    command: docker run --name build --rm -it -d almeida
+  - name: Copiando arquivo 
+    command: docker cp . Build:/App 
   
 
 
