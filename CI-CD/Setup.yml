@@ -7,7 +7,7 @@
   - name: Executando container 
     command: docker run --name build --rm -it -d almeida
   - name: Copiando arquivo 
-    command: docker cp . Build:/App 
+    command: docker cp . build:/App 
   
 
 
