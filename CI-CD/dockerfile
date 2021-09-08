@@ -1,3 +1,9 @@
 FROM ubuntu:20.04
 
+<<<<<<< HEAD
 COPY . /App
+=======
+COPY . /App
+WORKDIR /
+RUN rm App/Inventory App/Setup.yml App/dockerfile 
+>>>>>>> b8a0e51 (up)

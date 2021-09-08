@@ -5,9 +5,14 @@
   - name: Gerando Build Docker
     command: docker build -f dockerfile -t almeida .
   - name: Executando container 
+<<<<<<< HEAD
     command: docker run --name build --rm -it -d almeida
   - name: Copiando arquivo
     command: docker cp . build:/App 
+=======
+    command: docker run --name buildds --rm -it -d almeida
+
+>>>>>>> b8a0e51 (up)
   
 
 
