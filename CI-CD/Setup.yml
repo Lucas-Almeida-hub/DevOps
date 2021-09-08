@@ -6,9 +6,6 @@
     command: docker build -f dockerfile -t almeida .
   - name: Executando container 
     command: docker run --name buildds1aa --rm -it -d almeida
-  - name: Copiando containeer
-    coppy:
-      command: cd ..
   - name: Copiando arquivo
     command: docker cp . build:/App 
   
