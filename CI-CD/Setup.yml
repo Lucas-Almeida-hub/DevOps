@@ -2,7 +2,7 @@
 - hosts: Local
   become: yes
   tasks:
-  - name: Gerando Build Docker 
+  - name: Gerando Build Docker -----
     command: docker build -f dockerfile -t almeida .
   - name: Executando container 
 <<<<<<< HEAD
