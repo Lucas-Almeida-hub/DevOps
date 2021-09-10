@@ -7,4 +7,4 @@
   - name: gerando chave AWS  
     shell: aws ecr get-login-password --region us-east-2 | sudo docker login --username AWS --password-stdin 096738690913.dkr.ecr.us-east-2.amazonaws.com/almeida
   - name: Subir a imagem para AWS
-    shell: sudo docker push 096738690913.dkr.ecr.us-east-2.amazonaws.com/almeida:latest
+    shell: sudo docker push 096738690913.dkr.ecr.us-east-2.amazonaws.com/teste:latest
