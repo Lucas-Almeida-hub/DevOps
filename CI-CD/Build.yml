@@ -8,6 +8,7 @@
     command: docker tag almeida:latest 096738690913.dkr.ecr.us-east-2.amazonaws.com/teste:latest
   - name: apagando imagem 
     command: docker image rm -f almeida
+    
 
 
   
