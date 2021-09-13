@@ -1,0 +1,12 @@
+---
+- hosts: Web
+  become: yes
+  tasks:
+  - name: gerando chave AWS  
+    shell: sudo aws ecr get-login-password --region us-east-2 | sudo docker login --username AWS --password-stdin 096738690913.dkr.ecr.us-east-2.amazonaws.com/almeida 
+  - name: Puxando  a imagem para docker
+    shell: sudo docker pull 096738690913.dkr.ecr.us-east-2.amazonaws.com/teste:latest
+  - name: Executando Container 
+    shell: 
+
+  
