@@ -4,5 +4,5 @@ RUN apt update && apt update
 RUN apt-get install python3 -y
 COPY . /App
 WORKDIR /
-RUN rm App/Inventory App/Setup.yml App/dockerfile 
+RUN rm App/Inventory App/Build.yml App/dockerfile 
 CMD [ "python3 /App/HelloWord.py" ]
