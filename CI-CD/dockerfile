@@ -1,6 +1,6 @@
 FROM nginx:1.15.8-alpine
 
-COPY ./nginx.conf /etc/ngnx/nginx.conf
+#COPY ./nginx.conf /etc/ngnx/nginx.conf
 
-COPY ./Index.html /usr/share/nginx/html
+#COPY ./Index.html /usr/share/nginx/html
 
