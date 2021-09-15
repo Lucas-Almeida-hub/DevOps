@@ -1,5 +1,5 @@
 [Local]
-localhost ansible_connection=local 
+localhost ansible_connection=local ansible_become=yes
 
 [Web]
 13.59.13.151 ansible_ssh_user=ubuntu ansible_become=yes
