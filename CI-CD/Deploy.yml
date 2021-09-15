@@ -7,7 +7,7 @@
   - name: Download  a imagem para docker
     shell: sudo docker pull 096738690913.dkr.ecr.us-east-2.amazonaws.com/teste:latest
   - name: Executando Container 
-    shell: docker run -it --rm -p 80:80 096738690913.dkr.ecr.us-east-2.amazonaws.com/teste
+    shell: sudo docker run  -it --rm -d  -e TZ=America/Sao_Paulo -p 80:80 096738690913.dkr.ecr.us-east-2.amazonaws.com/teste
   
 
   
