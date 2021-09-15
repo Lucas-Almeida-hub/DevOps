@@ -2,6 +2,10 @@
 - hosts: Web
   become: yes
   tasks:
+  - name: apagando Container
+    shell: docker container rm -f $(docker ps -a -q) 
+  - name: Apagando imagem
+    shell: docker image rm -f $(docker image ls -a)
   - name: Gerando chave AWS  
     shell: sudo aws ecr get-login-password --region us-east-2 | sudo docker login --username AWS --password-stdin 096738690913.dkr.ecr.us-east-2.amazonaws.com/almeida 
   - name: Download  a imagem para docker
