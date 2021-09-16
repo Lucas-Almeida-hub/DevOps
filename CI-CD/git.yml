@@ -1,0 +1,7 @@
+---
+- hosts: Local
+  become: yes
+  tasks:
+  - name: apagando Container
+    shell: git clone -b Web git@github.com:Lucas-Almeida-hub/DevOps.git
+    
