@@ -3,7 +3,7 @@
   become: yes
   tasks:
   - name: Gerando Build Docker
-    command: sudo docker build -f CI-CD/dockerfile -t almeida .
+    command: sudo docker build -f workspace/Matrix/CI-CD/dockerfile -t almeida .
   - name: Taguiando a imagem
     command: docker tag almeida:latest 096738690913.dkr.ecr.us-east-2.amazonaws.com/teste:latest
   - name: apagando imagem 
