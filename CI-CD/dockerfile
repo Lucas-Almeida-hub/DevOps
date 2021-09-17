@@ -1,10 +1,10 @@
 FROM nginx:1.15.8-alpine
 
-COPY  workspace/DevOps/nginx.conf  /etc/nginx/nginx.conf
+COPY  ./nginx.conf  /etc/nginx/nginx.conf
 
-COPY workspace/DevOps/*.html /usr/share/nginx/html
+COPY ./*.html /usr/share/nginx/html
 
 RUN mkdir /usr/share/nginx/html/images
 
-COPY workspace/DevOps/images/*.png /usr/share/nginx/html/images
+COPY ./images/*.png /usr/share/nginx/html/images
 
