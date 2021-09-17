@@ -3,7 +3,7 @@
   become: yes
   tasks:
   - name: Gerando Build Docker
-    command: cd ~
+    command: cd ..
   - name: BUnda
     command: sudo docker build -f workspace/DevOps/CI-CD/dockerfile -t almeida .
   - name: Taguiando a imagem
