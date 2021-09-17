@@ -2,7 +2,7 @@
 - hosts: Local
   become: yes
   tasks:
-  - name: Gerando Build Docker
+  - name: Gerando Build Docker-
     command: ls
   - name: BUnda
     command: sudo docker build -f workspace/DevOps/CI-CD/dockerfile -t almeida .
