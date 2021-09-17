@@ -1,10 +1,10 @@
 FROM nginx:1.15.8-alpine
 
-ADD /var/lib/jenkins/workspace/DevOps/nginx.conf  /etc/nginx/nginx.conf
+COPY  /workspace/DevOps/nginx.conf  /etc/nginx/nginx.conf
 
-COPY DevOps/*.html /usr/share/nginx/html
+COPY /workspace/DevOps/*.html /usr/share/nginx/html
 
 RUN mkdir /usr/share/nginx/html/images
 
-COPY DevOps/images/*.png /usr/share/nginx/html/images
+COPY /workspace/DevOps/images/*.png /usr/share/nginx/html/images
 
