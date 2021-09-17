@@ -3,7 +3,7 @@
   become: yes
   tasks:
   - name: Gerando Build Docker
-    copy: src= /CI-CD/dockerfile dest=/CI-CD/
+    command: pwd
   - name: BUnda
     command: sudo docker build -f dockerfile -t almeida .
   - name: Taguiando a imagem
