@@ -1,18 +1,14 @@
-#Informaçoe do git
 
 Name_Brach: Web
 
-
 # Configuraçoes do ambiente
 
-Conf_end: Frontend
-  #Frontend/backend
-Ambiente: Dev
-  #Qa/Dev/Prod
-Conf_Porta: 80
+Ambiente: dev
+#dev, qa, prod
 
-# Configuraçoes do docker 
+bar: 2
 
-Nome: 
- # Qa/Dev/Prod
-Time_zone:
+
+
+
+

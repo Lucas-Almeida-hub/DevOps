@@ -1,13 +1,14 @@
 ---
 - hosts: Local
   become: yes
+  vars_files: "vars.yml"
   tasks:
   - name: Gerando Build Docker
     command: ls
   - name: Criando imagem Docker
     command: sudo docker build -f dockerfile -t almeida .
   - name: Taguiando a imagem
-    command: docker tag almeida:latest 096738690913.dkr.ecr.us-east-2.amazonaws.com/teste:latest
+    command: docker tag almeida:latest 096738690913.dkr.ecr.us-east-2.amazonaws.com/{{ Ambiente }}:latest
   - name: apagando imagem 
     command: docker image rm -f almeida
     

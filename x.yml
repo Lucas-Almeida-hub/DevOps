@@ -1,0 +1,15 @@
+---
+
+- name: mememe
+  hosts: Local
+  vars_files: "vars.yml"
+  become: yes
+  tasks:
+    - name: Check contents for emptiness
+      ansible.builtin.debug:
+        msg: "Directory is empty"
+      when: Ambiente == "QA"
+
+
+
+    

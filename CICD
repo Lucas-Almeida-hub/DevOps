@@ -21,11 +21,6 @@ pipeline{
             stage("Deploy"){
                 steps {
                     sh script : "sudo ansible-playbook Deploy.yml -i Inventory "
-                    sh script : "rm dockerfile"
-                    sh script : "rm Inventory"
-                    sh script : "rm Build.yml"
-                    sh script : "rm AWS.yml"
-                    sh script : "rm Deploy.yml"
                 }
             }
         }
