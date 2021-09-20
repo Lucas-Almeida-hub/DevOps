@@ -1,7 +1,7 @@
 ---
 - hosts: Local
   become: yes
-  vars_files: "vars.yml"
+  vars_files: "arquivos/vars.yml"
   tasks:
   - name: Criando repositorio 
     command: aws ecr create-repository --repository-name {{ Ambiente }} --image-scanning-configuration scanOnPush=true  --region us-east-2

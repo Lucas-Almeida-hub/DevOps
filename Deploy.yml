@@ -1,7 +1,7 @@
 ---
 - hosts: Local
   become: yes
-  vars_files: "vars.yml"
+  vars_files: "arquivos/vars.yml"
   tasks:
 
   - name: Print a variable
@@ -16,7 +16,7 @@
 - name: Verificando ambiente  DEV
   hosts: DEV
   become: yes
-  vars_files: "vars.yml"
+  vars_files: "arquivos/vars.yml"
   tasks:
     - name: Check contents for emptiness
       include_role:
@@ -26,7 +26,7 @@
 - name: Verificando ambiente QA
   hosts: QA
   become: yes
-  vars_files: "vars.yml"
+  vars_files: "arquivos/vars.yml"
   tasks:
     - name: Check contents for emptiness
       include_role:
@@ -36,7 +36,7 @@
 - name: Verificando ambiente PROD
   hosts: PROD
   become: yes
-  vars_files: "vars.yml"
+  vars_files: "arquivos/vars.yml"
   tasks:
     - name: Check contents for emptiness
       include_role:
