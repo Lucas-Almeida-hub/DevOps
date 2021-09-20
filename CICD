@@ -10,9 +10,6 @@ pipeline{
             stage("Configurando area de build "){
                 steps {
                     
- 
-                    
-
                     ansiblePlaybook inventory: 'Inventory', playbook: 'Build.yml'
                 }
             }
