@@ -1,7 +1,0 @@
-[Local]
-localhost ansible_connection=local ansible_become=yes
-
-[Web]
-18.232.76.204 ansible_ssh_user=ubuntu ansible_become=yes
-
-

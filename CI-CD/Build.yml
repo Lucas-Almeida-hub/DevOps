@@ -2,9 +2,7 @@
 - hosts: Local
   become: yes
   tasks:
-  - name: Gerando Build Docker-
-    command: ls
-  - name: BUnda
+  - name: Gerando Build Docker
     command: sudo docker build -f dockerfile -t almeida .
   - name: Taguiando a imagem
     command: docker tag almeida:latest 096738690913.dkr.ecr.us-east-2.amazonaws.com/teste:latest
