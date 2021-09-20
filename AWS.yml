@@ -1,0 +1,21 @@
+---
+- hosts: Local
+  become: yes
+  tasks:
+  - name: Criando repositorio 
+    command: aws ecr create-repository --repository-name teste --image-scanning-configuration scanOnPush=true  --region us-east-2
+    register: result
+    ignore_errors: true
+  
+  - name: gerando chave AWS  
+    shell: aws ecr get-login-password --region us-east-2 | sudo docker login --username AWS --password-stdin 096738690913.dkr.ecr.us-east-2.amazonaws.com/almeida
+
+  - name: Run only if the task that registered the "result" variable fails
+    shell: aws ecr batch-delete-image --repository-name teste --image-ids imageTag=latest
+    when: result is failed
+  
+  - name: Subir a imagem para AWS
+    shell: sudo docker push 096738690913.dkr.ecr.us-east-2.amazonaws.com/teste:latest
+
+  - name: apagando imagem 
+    command: docker image rm -f 096738690913.dkr.ecr.us-east-2.amazonaws.com/teste

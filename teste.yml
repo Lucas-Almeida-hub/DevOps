@@ -1,0 +1,21 @@
+
+---
+- hosts: Local
+  become: yes
+  tasks:
+    - name: Register a variable, ignore errors and continue
+      command: echo "correto">> erro.txt
+      register: result
+      ignore_errors: true
+
+    - name: Run only if the task that registered the "result" variable succeeds
+      shell: sudo echo "correto">> erro.txt
+      when: result is succeeded
+
+    - name: Run only if the task that registered the "result" variable fails
+      command: echo "erro ">>erro.txt
+      when: result is failed
+
+    - name: Run only if the task that registered the "result" variable is skipped
+      ansible.builtin.command: echo "correto">> erro.txt
+      when: result is skipped
