@@ -1,0 +1,6 @@
+
+Name_Brach: Web
+# Configuraçoes do ambiente
+
+Ambiente: dev
+#dev, qa, prod
