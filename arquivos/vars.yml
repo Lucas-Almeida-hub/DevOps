@@ -1,12 +1,15 @@
+ 
 
-Name_Brach: Web
 # Configuraçoes do ambiente
 
+Name_Brach: Web
 Ambiente: dev
-#dev, qa, prod
 
-
-
+#Configuraçoes do docker 
+Dockerfile: 
+Porta: 80
+Porta_saida: 80  
+FusoHorário: America/Sao_Paulo
 
 
 
