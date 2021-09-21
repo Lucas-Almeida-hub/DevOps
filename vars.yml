@@ -3,7 +3,7 @@
 # Configuraçoes do ambiente
 
 Name_Brach: Web
-Ambiente: dev
+Ambiente: qa
 
 #Configuraçoes do docker 
 Dockerfile: 
