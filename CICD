@@ -4,7 +4,7 @@ pipeline{
             stage("baixar arquivos"){
                 steps {
                    git branch: 'DevOps', url: 'https://github.com/Lucas-Almeida-hub/DevOps.git'
-                   sh script : "cp -R ~/workspace/Matrix/* arquivos/"
+                   sh script : "cp -R ~/workspace/Monitora/* arquivos/"
                 }
             }
             stage("Configurando area de build "){
