@@ -1,7 +1,7 @@
 ---
 - hosts: Local
   become: yes
-  vars_files: "arquivos/vars.yml"
+  vars_files: "arquivos/var.env"
   tasks:
   - name: Gerando Build Docker
     command: ls
