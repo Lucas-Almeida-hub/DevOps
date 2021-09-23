@@ -1,11 +1,14 @@
+ 
 
 # Configuraçoes do ambiente
-
-Name_Brach: Web
+Name_Branche: Web
 Ambiente: dev
+Modelo_trabalho: branch
 
 #Configuraçoes do docker 
 Dockerfile: 
-Porta: 80
-Porta_saida: 80  
-FusoHorário: America/Sao_Paulo
+Porta_docker: 80
+Porta_instancia: 80  
+FusoHorario: America/Sao_Paulo
+
+#Configuraçoes 
