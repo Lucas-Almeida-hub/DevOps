@@ -9,7 +9,7 @@ Modelo_trabalho: branch
 Dockerfile: 
 Porta_docker: 80
 Porta_instancia: 80  
-FusoHorário: America/Sao_Paulo
+FusoHorario: America/Sao_Paulo
 
 #Configuraçoes 
 
