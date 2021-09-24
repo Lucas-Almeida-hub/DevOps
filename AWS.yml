@@ -11,7 +11,7 @@
   - name: gerando chave AWS  
     shell: aws ecr get-login-password --region us-east-2 | sudo docker login --username AWS --password-stdin 096738690913.dkr.ecr.us-east-2.amazonaws.com/almeida
 
-  - name: Run only if the task that registered the "result" variable fails
+  - name: Execute apenas se a tarefa que registrou a variável "result" falhar
     shell: aws ecr batch-delete-image --repository-name {{ Ambiente }} --image-ids imageTag=latest
     when: result is failed
   

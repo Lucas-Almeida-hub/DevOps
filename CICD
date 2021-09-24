@@ -10,17 +10,17 @@ pipeline{
             stage("Configurando area de build "){
                 steps {
                     
-                    ansiblePlaybook inventory: 'Inventory', playbook: 'Build.yml'
+                    ansiblePlaybook inventory: 'host', playbook: 'Build.yml'
                 }
             }
             stage("Enviando imagem para AWS"){
                 steps {
-                    ansiblePlaybook inventory: 'Inventory', playbook: 'AWS.yml'
+                    ansiblePlaybook inventory: 'host', playbook: 'AWS.yml'
                 }
             }
             stage("Deploy"){
                 steps {
-                    sh script : "sudo ansible-playbook Deploy.yml -i Inventory "
+                    sh script : "sudo ansible-playbook Deploy.yml -i host"
                 }
             }
         }
