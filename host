@@ -2,10 +2,10 @@
 localhost ansible_connection=local ansible_become=yes
 
 [DEV]
-18.220.55.230 ansible_ssh_user=ubuntu ansible_become=yes
+18.216.226.155 ansible_ssh_user=ubuntu ansible_become=yes
 
 [QA]
-18.220.55.230 ansible_ssh_user=ubuntu ansible_become=yes
+18.216.226.155 ansible_ssh_user=ubuntu ansible_become=yes
 
 [PROD]
-18.220.55.230 ansible_ssh_user=ubuntu ansible_become=yes
+18.216.226.155 ansible_ssh_user=ubuntu ansible_become=yes
